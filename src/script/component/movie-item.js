@@ -7,11 +7,17 @@ class MovieItem extends HTMLElement {
     this.render();
   }
 
+  set movie(movie) {
+      console.log("haha");
+    this._movie = movie;
+    this.render();
+  }
+
   render() {
     this.innerHTML = `
     <div class="card">
             <img
-              src="https://image.tmdb.org/t/p/original/5BwqwxMEjeFtdknRV792Svo0K1v.jpg"
+              src="https://image.tmdb.org/t/p/w500/5BwqwxMEjeFtdknRV792Svo0K1v.jpg"
               class="card-img-top"
               alt="..."
             />

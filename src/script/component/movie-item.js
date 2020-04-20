@@ -8,7 +8,6 @@ class MovieItem extends HTMLElement {
   }
 
   set movie(movie) {
-      console.log("haha");
     this._movie = movie;
     this.render();
   }
@@ -17,7 +16,7 @@ class MovieItem extends HTMLElement {
     this.innerHTML = `
     <div class="card">
             <img
-              src="https://image.tmdb.org/t/p/w500/5BwqwxMEjeFtdknRV792Svo0K1v.jpg"
+              src="https://image.tmdb.org/t/p/w500/${this.movie.backdrop_path}"
               class="card-img-top"
               alt="..."
             />

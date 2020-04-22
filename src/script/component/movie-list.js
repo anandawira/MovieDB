@@ -11,7 +11,8 @@ class MovieList extends HTMLElement {
 
   render() {
     this._movies.forEach((movie) => {
-      const movieItemElement = document.createElement("club-item");
+      const movieItemElement = document.createElement("movie-item");
+      movieItemElement.className = "card-deck col mx-auto my-3";
       movieItemElement.movie = movie;
       this.appendChild(movieItemElement);
     });

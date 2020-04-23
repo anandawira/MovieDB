@@ -21,12 +21,9 @@ class MovieItem extends HTMLElement {
               alt="..."
             />
             <div class="card-body bg-light">
-              <div class="d-flex flex-row">
-                <h3 class="card-title flex-grow-1 my-auto">
+                <h3 class="card-title my-auto">
                   ${this._movie.original_title}
                 </h3>
-                <i class="far fa-heart my-auto" style="font-size: 30px;"></i>
-              </div>
 
               <p class="card-text">
                 ${this._movie.overview}

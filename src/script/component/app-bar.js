@@ -16,13 +16,10 @@ class AppBar extends HTMLElement {
         </a>
         <ul class="nav nav-pills mr-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Top Movies</a>
+            <a class="nav-link" href="#">Top Movies</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Now Showing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Favorite Movies</a>
           </li>
         </ul>
         <form class="form-inline">

@@ -2,12 +2,8 @@ import "../component/movie-list.js";
 import DataSource from "../data/data-source.js";
 
 var main = () => {
-  const nowShowingNav = document.querySelector(
-    "body > header > app-bar > nav > ul > li:nth-child(2) > a"
-  );
-  const topMoviesNav = document.querySelector(
-    "body > header > app-bar > nav > ul > li:nth-child(1) > a"
-  );
+  const nowShowingNav = document.querySelector("#nowShowingNav");
+  const topMoviesNav = document.querySelector("#topMovieNav");
 
   const movieListElement = document.querySelector("movie-list");
   const renderResult = (results) => {
@@ -19,13 +15,10 @@ var main = () => {
   };
 
   // Search Button
-  const searchButton = document.querySelector(
-    "body > header > app-bar > nav > form > button"
-  );
-  const onButtonSearchClicked = () => {
-    const searchInput = document.querySelector(
-      "body > header > app-bar > nav > form > input"
-    );
+  const searchButton = document.querySelector("#searchButton");
+  const onButtonSearchClicked = event => {
+    event.preventDefault();
+    const searchInput = document.querySelector("#searchInput");
     topMoviesNav.classList.remove("active");
     nowShowingNav.classList.remove("active");
     DataSource.searchMovie(searchInput.value)

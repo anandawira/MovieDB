@@ -11,13 +11,14 @@ class MovieList extends HTMLElement {
 
   render() {
     this.innerHTML = "";
-    console.log("render");
-    this._movies.forEach((movie) => {
-      const movieItemElement = document.createElement("movie-item");
-      movieItemElement.className = "card-deck col mx-auto my-3";
-      movieItemElement.movie = movie;
-      this.appendChild(movieItemElement);
-    });
+    if (this._movies.length > 0) {
+      this._movies.forEach((movie) => {
+        const movieItemElement = document.createElement("movie-item");
+        movieItemElement.className = "card-deck col mx-auto my-3";
+        movieItemElement.movie = movie;
+        this.appendChild(movieItemElement);
+      });
+    }
   }
 
   renderError(message) {
